@@ -786,7 +786,19 @@ $('#deck').click(function() {
 
 
 
-$('#new').click(function() {
+// $('#new').click(function() {
+
+  // });
+
+
+
+//create new deck and shuffle it
+let cardDeck = new Deck();
+cardDeck.createDeck(suits, ranks, values);
+// cardDeck.shuffle();
+
+let gameBoard = new Board();
+
   $('#pass').hide();
   $('.logo').hide();
   $('#deck').show();
@@ -806,19 +818,6 @@ $('#new').click(function() {
   playersRef.set(gameBoard.players);   
   scoreBoard();
   currentHole = 1;
-  });
-
-
-
-//create new deck and shuffle it
-let cardDeck = new Deck();
-cardDeck.createDeck(suits, ranks, values);
-// cardDeck.shuffle();
-
-if gameBoard {
-} else {
-  let gameBoard = new Board();
-}
 // gameBoard.players.push['Mario'];
 // console.log(gameBoard.players);
 // playersRef.set(gameBoard.players);   
