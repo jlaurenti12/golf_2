@@ -815,8 +815,10 @@ let cardDeck = new Deck();
 cardDeck.createDeck(suits, ranks, values);
 // cardDeck.shuffle();
 
-
-let gameBoard = new Board();
+if gameBoard {
+} else {
+  let gameBoard = new Board();
+}
 // gameBoard.players.push['Mario'];
 // console.log(gameBoard.players);
 // playersRef.set(gameBoard.players);   
