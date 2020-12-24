@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../public/card_deck.css" type="text/css">
+  <title>Deck of Cards</title>
+</head>
+<body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"
+  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+  crossorigin="anonymous"></script>
+
+  <!-- THIS SPAN HOLDS DATA FROM EJS -->
+  <!-- IN JS ACCESS IT WITH document.querySeletor('#data').dataset -->
+<span id="data" data-gameKey="<%= gameNum %>"></span>
+
+  <section id="controls-wrapper">
+  </section>
+
+
+<!--      <img class="logo" src="logo.png" alt="Simply Easy Learning"/>
+ -->    <div id="instruction"></div>
+      <div id='deck' class='back'/></div>
+      <div id="discardPile"></div>
+  <!--    <button id="deal">Shuffle & Deal</button>
+  --><button id="pass">Choose or Pass</button>
+      <button id="restart">Next Round</button>
+      <button id="new" class="btn btn-light btn-lg">Start a New Game</button>
+      <div id="scoreboard">
+        <table class="table table-bordered table-dark">
+          <thead>
+            <tr id='columns'>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id='rows'>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id ="byRound" type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+          Scores by Round
+        </button>
+
+    </div>
+
+
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Scores By Round</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr id="players">
+                <th scope="col">Hole</th>
+              </tr>
+            </thead>
+            <tbody id="holes">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- JQUERY DEPENDENCCY -->
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- APP JAVASCRIPT -->
+  <script src='../public/cardDeck.js'></script>
+</body>
+</html>

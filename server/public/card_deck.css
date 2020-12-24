@@ -1,0 +1,294 @@
+
+/*{
+  width:50%;
+  margin: 20px auto;
+  background:dodgerblue;
+  border:solid 10px black;
+  padding: 10px;
+  border-radius:10px;
+  text-align: center;
+  color:white;
+}*/
+*{
+box-sizing: initial !important;
+}
+
+.logo {
+  height: 650px;
+  margin:0 auto;
+  position:absolute;
+  left:25%;
+
+}
+
+
+
+#instruction {
+  background-color: #222;
+  height: 60px;
+  width: 260px;
+  float: left;
+  color: white;
+  padding: 20px;
+}
+
+#scoreboard {
+  height: 100px;
+  width: 300px;
+  float: right;
+}
+
+body {
+  background-image: url("suits_imgs/Table.jpg");
+  background-size: cover;
+  color: black;
+  font-family: Arial;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.back
+{
+  background-image: url("suits_imgs/Back.png");
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+
+}
+
+.card, .discardCard
+{
+  width: 97.5px;
+    height: 143px;
+    padding: 10px;
+    border: solid 1px #808080;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 10pt;
+    text-align: center;
+    margin: 3px;
+}
+
+.discardCard {
+  margin:0 auto;
+  position:absolute;
+  left:51%;
+  top:50%;
+  margin-top:-75px;
+}
+
+
+
+
+
+#deck {
+  display: inline-block;
+  margin:0 auto;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-110px;
+  margin-top:-75px;
+  width: 97.5px;
+    height: 143px;
+    padding: 10px;
+    border: solid 1px #808080;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 10pt;
+    text-align: center;
+
+}
+
+#discardPile {
+  display: inline-block;
+  left:50%;
+  top:50%;
+
+}
+
+#restart, #pass, #deal
+{
+  background:white;
+  padding: 10px 20px;
+  border-radius:30px;
+  display:inline-block;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-125px;
+  margin-top:-15px;
+}
+
+#new {
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-125px;
+  margin-top:-15px;
+}
+
+
+.card .value{
+  font-size:15pt;
+  font-family: sans-serif;
+  margin-top: 10px;
+  color: black;
+}
+
+.card .suit{
+  font-size:  64px;
+}
+
+.discardValue{
+  font-size:15pt;
+  font-family: sans-serif;
+  margin-top: 10px;
+  color: black;
+}
+
+.discardSuit{
+  font-size:  64px;
+}
+
+.spades, .clubs, .Joker {
+  color: black;
+}
+
+.hearts, .diamonds {
+  color: red;
+}
+
+/*.discardCard .discardValue{
+  font-size:15pt;
+  font-family: sans-serif;
+  margin-top: 10px;
+}*/
+
+
+.selected {
+  border: 5px solid black;
+}
+
+
+
+/*.card .suit
+{
+  background-image: url('card.png');
+  height: 50px;
+  width: 50px;
+  margin: 20px 32px;
+}
+
+
+
+.discardCard .discardSuit
+{
+  background-image: url('card.png');
+  height: 100px;
+  width: 90px;
+  margin: 20px 32px;
+}
+
+.discardCard .Joker
+{
+  background-image: url('joker.jpeg') !important;
+  background-size: 75px;
+}
+
+
+.card .Joker
+{
+  background-image: url('joker.jpeg') !important;
+  background-size: 75px;
+}
+
+
+.card .diamonds
+{
+  background-position-y: 100px;
+}
+
+.discardCard .diamonds
+{
+  background-position-y: 100px;
+}
+
+.card .hearts
+{
+  background-position-x: 90px;
+}
+
+.discardCard .hearts
+{
+  background-position-x: 90px;
+}
+
+
+.card .clubs
+{
+  background-position-x:90px;
+  background-position-y:100px;
+}
+
+.discardCard .clubs
+{
+  background-position-x:90px;
+  background-position-y:100px;
+}*/
+
+.player {
+  margin-bottom: 10px;
+  width:400px;
+  height:400px;
+  margin:0 auto;
+  position:absolute;
+  color: white;
+}
+
+.name {
+  margin-top: 10px;
+  margin-bottom: 16px;
+
+}
+
+#Mario{
+
+  left:56%;
+  margin-left:-300px;
+  margin-top:-20px;
+  text-align:center;
+}
+
+#Luigi{
+  right:2%;
+  top: 50%;
+  margin-right:0px;
+  margin-top:-250px;
+  text-align:center;
+
+}
+
+#Pikachu{
+  left:56%;
+  bottom: 0%;
+  margin-left:-300px;
+  margin-bottom:0px;
+  text-align:center;
+
+}
+
+#Yoshi{
+
+  left:2%;
+  top: 50%;
+  margin-left:0px;
+  margin-top:-250px;
+  text-align:center;
+
+}
+
