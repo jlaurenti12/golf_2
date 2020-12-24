@@ -817,7 +817,7 @@ cardDeck.createDeck(suits, ranks, values);
 
 
 let gameBoard = new Board();
-gameBoard.players.push['Mario'];
+// gameBoard.players.push['Mario'];
 // console.log(gameBoard.players);
 // playersRef.set(gameBoard.players);   
 // gameBoard.start( 'Mario', 'Luigi', 'Pikachu', 'Yoshi');
