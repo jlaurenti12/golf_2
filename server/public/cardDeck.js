@@ -26,6 +26,7 @@ gameListRef.push();
 let DeckReference = firebase.database().ref(`gameKey_${gameKey}`);
 let deckRef = DeckReference.child('deckoCards');
 let playersRef = DeckReference.child('players');
+let boardRef = DeckReference.child('board');
 // let count1Ref = DeckReference.child('count1');
 // let count2Ref = DeckReference.child('count2');
 // let crib1Ref = DeckReference.child('crib1');
@@ -211,7 +212,7 @@ class Deck {
 
   deal(cards, players) {
 
-      console.log(players);
+    console.log(players);
 
     // d = new Deck();
     // let deck = d.createDeck();
@@ -220,8 +221,8 @@ class Deck {
     // d.shuffleDeck();
     // startNewGame();
     // startNewRound();
-    console.log('This is at the end');
-    console.log(gameBoard.players);
+    // console.log('This is at the end');
+    // console.log(gameBoard.players);
 
     playersFinished = 0; 
 
@@ -783,22 +784,14 @@ $('#deck').click(function() {
 });
 
 
+let gameBoard;
 
 
+$('#new').click(function() {
 
-// $('#new').click(function() {
-
-  // });
-
-
-
-//create new deck and shuffle it
-let cardDeck = new Deck();
-cardDeck.createDeck(suits, ranks, values);
-// cardDeck.shuffle();
-
-let gameBoard = new Board();
-
+  gameBoard = new Board();
+  boardRef.set(gameBoard); 
+  gameBoard.start( 'Mario', 'Luigi', 'Pikachu', 'Yoshi');
   $('#pass').hide();
   $('.logo').hide();
   $('#deck').show();
@@ -808,16 +801,25 @@ let gameBoard = new Board();
   $('div.discardCard').remove();
   $('#instruction').show();
   cardDeck.shuffle();
-  gameBoard.start( 'Mario', 'Luigi', 'Pikachu', 'Yoshi');
   cardDeck.deal(gameBoard.players, gameBoard.players)
   gameBoard.players.forEach(function(player) {
     player.playerTotal = 0;
     player.playerScore = [];
   });
-  console.log(gameBoard.players);
   playersRef.set(gameBoard.players);   
   scoreBoard();
   currentHole = 1;
+
+});
+
+
+
+//create new deck and shuffle it
+let cardDeck = new Deck();
+cardDeck.createDeck(suits, ranks, values);
+// cardDeck.shuffle();
+
+
 // gameBoard.players.push['Mario'];
 // console.log(gameBoard.players);
 // playersRef.set(gameBoard.players);   
